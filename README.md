@@ -149,7 +149,7 @@ There are two ways to use CollageView in your project:
 ```ruby
 platform :ios, '8.0'
 use_frameworks!
-pod 'CollageView', '~> 1.0.0'
+pod 'CollageView', '~> 1.0.1'
 ```
 
 ## Author
