@@ -13,5 +13,5 @@ Like any other customViews, can be used with changing your view's class name as 
 - Interface Builder
 
 <p align="left">
-<img src="Images/interfaceClassName.png"/>
+<img src="Images/interfaceClassName.png" max-width="40%"/>
 </p>
