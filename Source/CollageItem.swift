@@ -10,10 +10,10 @@ import UIKit
 
 public struct CollageItem {
     
-    var borderWidth : CGFloat = 2.0
-    var borderColor : UIColor = .white
-    var contentMode : UIViewContentMode = .scaleAspectFill
-    var rowIndex  = (0, 0)
-    var indexForImageArray = 0
+    public private(set) var borderWidth : CGFloat = 2.0
+    public private(set) var borderColor : UIColor = .white
+    public private(set) var contentMode : UIViewContentMode = .scaleAspectFill
+    public private(set) var rowIndex  = (0, 0)
+    public private(set) var indexForImageArray = 0
 }
 
