@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.author           = { "Ahmet Kazım Günay" => "ahmetkgunay@gmail.com" }
   s.source           = { :git => "https://github.com/ahmetkgunay/CollageView.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/ahmtgny'
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '8.0'
   s.requires_arc = true
 
   s.source_files = 'Source/*.swift'
