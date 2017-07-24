@@ -135,6 +135,23 @@ extension ViewController: CollageViewDelegate {
 
 ```
 
+## Installation
+
+There are two ways to use CollageView in your project:
+- using CocoaPods
+- by cloning the project into your repository
+
+### Installation with CocoaPods
+
+[CocoaPods](http://cocoapods.org/) is a dependency manager for Swift and Objective-C, which automates and simplifies the process of using 3rd-party libraries in your projects. See the [Get Started](http://cocoapods.org/#get_started) section for more details.
+
+#### Podfile
+```ruby
+platform :ios, '8.0'
+use_frameworks!
+pod 'CollageView', '~> 1.0.0'
+```
+
 ## Author
 
 Ahmet Kazım Günay, ahmetkgunay@gmail.com
