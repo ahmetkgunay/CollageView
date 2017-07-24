@@ -1,4 +1,9 @@
 # CollageView
+
+[![Version](https://img.shields.io/cocoapods/v/CollageView.svg?style=flat)](http://cocoapods.org/pods/CollageView)
+[![License](https://img.shields.io/cocoapods/l/CollageView.svg?style=flat)](http://cocoapods.org/pods/CollageView)
+[![Platform](https://img.shields.io/cocoapods/p/CollageView.svg?style=flat)](http://cocoapods.org/pods/CollageView)
+
 Custom View, collageView implementation with pure swift3.
 
 This Library's aim is to make easily photo collage views.
