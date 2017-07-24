@@ -37,7 +37,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="m5U-gm-GQz"/>
                     <connections>
-                        <outlet property="collageView" destination="P2i-Cl-m39" id="zCh-c8-HAu"/>
+                        <outlet property="collageView" destination="P2i-Cl-m39" id="Zcc-Uo-oqK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -49,6 +49,10 @@ open class CollageView: UIView {
         super.init(coder: aDecoder)
     }
     
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
     // MARK: Inline Helpers
     
     fileprivate func addImageViews() {
