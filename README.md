@@ -13,7 +13,7 @@ Like any other customViews, can be used with changing your view's class name as 
 - Interface Builder
 
 <p align="left">
-<img src="Images/interfaceClassName.png" width="100" max-width="40%"/>
+<img src="Images/interfaceClassName.png" width="300" max-width="50%"/>
 </p>
 
 ```swift
