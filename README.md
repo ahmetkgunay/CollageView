@@ -19,6 +19,7 @@ Like any other customViews, can be used with changing your view's class name as 
 
 <p align="left">
 <img src="Images/interfaceClassName.png" width="300" max-width="50%"/>
+<img src="Images/interfaceClassName.png" width="500" height="889"/>
 </p>
 
 ```swift
@@ -154,7 +155,7 @@ There are two ways to use CollageView in your project:
 ```ruby
 platform :ios, '8.0'
 use_frameworks!
-pod 'CollageView', '~> 1.0.1'
+pod 'CollageView', '~> 1.0.2'
 ```
 
 ## Author
