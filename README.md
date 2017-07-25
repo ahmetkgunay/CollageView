@@ -10,12 +10,6 @@ This Library's aim is to make easily photo collage views.
 
 ![Anim](https://github.com/ahmetkgunay/CollageView/blob/master/Gifs/collageView.gif)
 
-<p align="center">
-<img src="Images/moreImages.png" width="300" height="533"/>
-<img src="Images/moreImagesLandscape.png" width="534" height="300"/>
-</p>
-
-
 ## Usage
 
 Like any other customViews, can be used with changing your view's class name as "CollageView" or initialize in code.
@@ -144,6 +138,15 @@ extension ViewController: CollageViewDelegate {
 }
 
 ```
+
+## Demo App Output
+
+<p align="center">
+<img src="Images/moreImages.png" width="300" height="533"/>
+<img src="Images/moreImagesLandscape.png" width="534" height="300"/>
+</p>
+
+
 
 ## Installation
 
