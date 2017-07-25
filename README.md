@@ -8,11 +8,12 @@ Custom View, collageView implementation with pure swift3.
 
 This Library's aim is to make easily photo collage views.
 
-<p align="left">
 ![Anim](https://github.com/ahmetkgunay/CollageView/blob/master/Gifs/collageView.gif)
-<img src="Images/moreImages.png" width="300" height="533"/>
-</p>
 
+<p align="center">
+<img src="Images/moreImages.png" width="300" height="533"/>
+<img src="Images/moreImagesLandscape.png" width="534" height="300"/>
+</p>
 
 
 ## Usage
