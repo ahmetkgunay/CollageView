@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C335EC901F2670AE0007BF4D /* CollageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C335EC8D1F2670AE0007BF4D /* CollageItem.swift */; };
-		C335EC911F2670AE0007BF4D /* CollageItemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C335EC8E1F2670AE0007BF4D /* CollageItemImageView.swift */; };
+		C335EC911F2670AE0007BF4D /* CollageItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C335EC8E1F2670AE0007BF4D /* CollageItemView.swift */; };
 		C335EC921F2670AE0007BF4D /* CollageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C335EC8F1F2670AE0007BF4D /* CollageView.swift */; };
 		C362CE341F25FEB100F8C341 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362CE331F25FEB100F8C341 /* AppDelegate.swift */; };
 		C362CE361F25FEB100F8C341 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362CE351F25FEB100F8C341 /* ViewController.swift */; };
@@ -30,7 +30,7 @@
 
 /* Begin PBXFileReference section */
 		C335EC8D1F2670AE0007BF4D /* CollageItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollageItem.swift; sourceTree = "<group>"; };
-		C335EC8E1F2670AE0007BF4D /* CollageItemImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollageItemImageView.swift; sourceTree = "<group>"; };
+		C335EC8E1F2670AE0007BF4D /* CollageItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollageItemView.swift; sourceTree = "<group>"; };
 		C335EC8F1F2670AE0007BF4D /* CollageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollageView.swift; sourceTree = "<group>"; };
 		C362CE301F25FEB100F8C341 /* CollageView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollageView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C362CE331F25FEB100F8C341 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				C335EC8D1F2670AE0007BF4D /* CollageItem.swift */,
-				C335EC8E1F2670AE0007BF4D /* CollageItemImageView.swift */,
+				C335EC8E1F2670AE0007BF4D /* CollageItemView.swift */,
 				C335EC8F1F2670AE0007BF4D /* CollageView.swift */,
 			);
 			name = Source;
@@ -220,7 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C362CE361F25FEB100F8C341 /* ViewController.swift in Sources */,
-				C335EC911F2670AE0007BF4D /* CollageItemImageView.swift in Sources */,
+				C335EC911F2670AE0007BF4D /* CollageItemView.swift in Sources */,
 				C335EC901F2670AE0007BF4D /* CollageItem.swift in Sources */,
 				C335EC921F2670AE0007BF4D /* CollageView.swift in Sources */,
 				C362CE341F25FEB100F8C341 /* AppDelegate.swift in Sources */,

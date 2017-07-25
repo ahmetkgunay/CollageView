@@ -8,9 +8,24 @@
 
 import UIKit
 
-public class CollageItemImageView: UIImageView {
+public class CollageItemView: UIView {
 
     public private(set) var collageItem : CollageItem?
+    
+    lazy var imageView : UIImageView = {
+        let imgView = UIImageView()
+        imgView.contentMode         = self.contentMode
+        imgView.layer.borderColor   = self.layer.borderColor
+        imgView.layer.borderWidth   = self.layer.borderWidth
+        imgView.clipsToBounds       = true
+        return imgView
+    }()
+
+    public var image: UIImage? {
+        didSet {
+            imageView.image = image
+        }
+    }
     
     // MARK: - Initialize
     
@@ -22,6 +37,7 @@ public class CollageItemImageView: UIImageView {
         super.init(frame: .zero)
         self.collageItem = collageItem
         prepareLayoutSettings(for: collageItem)
+        self.addSubview(imageView)
     }
     
     private func prepareLayoutSettings(for collageItem: CollageItem) {
@@ -31,5 +47,10 @@ public class CollageItemImageView: UIImageView {
         self.layer.borderWidth          = collageItem.borderWidth
         self.clipsToBounds              = true
         self.isUserInteractionEnabled   = true
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        imageView.frame = self.bounds
     }
 }

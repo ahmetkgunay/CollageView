@@ -14,7 +14,7 @@ public enum CollageViewLayoutDirection {
 
 @objc public protocol CollageViewDelegate: NSObjectProtocol {
     
-    @objc optional func collageView(_ collageView: CollageView, didSelect itemView: CollageItemImageView, at index: Int)
+    @objc optional func collageView(_ collageView: CollageView, didSelect itemView: CollageItemView, at index: Int)
 }
 
 public protocol CollageViewDataSource: NSObjectProtocol {
@@ -22,16 +22,16 @@ public protocol CollageViewDataSource: NSObjectProtocol {
     func collageViewNumberOfRowOrColoumn(_ collageView: CollageView) -> Int
     func collageViewNumberOfTotalItem(_ collageView: CollageView) -> Int
     func collageViewLayoutDirection(_ collageView: CollageView) -> CollageViewLayoutDirection
-    func collageView(_ collageView: CollageView, configure itemView:CollageItemImageView, at index: Int)
+    func collageView(_ collageView: CollageView, configure itemView:CollageItemView, at index: Int)
 }
 
 open class CollageView: UIView {
     
-    typealias rowIndex = (x:Int, y:Int)
+    public typealias rowIndex = (x:Int, y:Int)
     
     // MARK: - Public Properties
     
-    open private(set) var imageViews                        = Array<CollageItemImageView>()
+    open private(set) var imageViews                        = Array<CollageItemView>()
     open var layoutDirection : CollageViewLayoutDirection   = .vertical
     open private(set) var rowOrColoumnCount : Int           = 0
     open private(set) var itemCount                         = 0
@@ -94,14 +94,14 @@ open class CollageView: UIView {
         rowOrColoumnCount   = 0
         self.subviews.forEach { $0.removeFromSuperview() }
         
-        self.subviews.lazy.filter { $0 is CollageItemImageView }
+        self.subviews.lazy.filter { $0 is CollageItemView }
             .flatMap { $0.gestureRecognizers ?? [] }
             .forEach { $0.view?.removeGestureRecognizer($0) }
     }
     
     // MARK: Tap Gesture 
     
-    fileprivate func addTapGesture(to itemView: CollageItemImageView) {
+    fileprivate func addTapGesture(to itemView: CollageItemView) {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         itemView.addGestureRecognizer(tapGesture)
@@ -109,7 +109,7 @@ open class CollageView: UIView {
     
     @objc fileprivate func handleTap(_ sender: UITapGestureRecognizer) {
         
-        let itemView = sender.view as! CollageItemImageView
+        let itemView = sender.view as! CollageItemView
         guard let item = itemView.collageItem else { return }
         
         self.delegate?.collageView?(self, didSelect: itemView, at: item.indexForImageArray)
@@ -130,12 +130,12 @@ open class CollageView: UIView {
 
 extension CollageView {
     
-    fileprivate func createImageView(_ index:Int) -> CollageItemImageView {
+    fileprivate func createImageView(_ index:Int) -> CollageItemView {
         
         let rowIndex = rowIndexForItem(at: index)
         
         let item = CollageItem(borderWidth: 1, borderColor: .white, contentMode: .scaleAspectFill, rowIndex: rowIndex, indexForImageArray : index)
-        return CollageItemImageView(collageItem: item)
+        return CollageItemView(collageItem: item)
     }
     
     private func rowIndexForItem(at index:Int) -> rowIndex {
@@ -154,7 +154,7 @@ extension CollageView {
         return returnRowIndex
     }
     
-    fileprivate func frameAtIndex(rowIndex:rowIndex) -> CGRect {
+    public func frameAtIndex(rowIndex:rowIndex) -> CGRect {
         
         let mode          = modeValue(for: itemCount)
         let fullyDivided  = isFullyDivided(forMode: mode)
