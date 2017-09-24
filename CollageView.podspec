@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version          = '1.0.2'
   s.summary          = "Easy to use and fully customizable CollageView with multiple images inside."
   s.description      = <<-DESC
-  Custom View, collageView implementation with pure swift3. This Library's aim is to make easily photo collage views.
+  Custom View, collageView implementation with pure swift4. This Library's aim is to make easily photo collage views.
                        DESC
   s.homepage         = "https://github.com/ahmetkgunay/CollageView"
   s.license          = 'MIT'
