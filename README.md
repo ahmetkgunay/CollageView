@@ -3,6 +3,15 @@
 [![Version](https://img.shields.io/cocoapods/v/CollageView.svg?style=flat)](http://cocoapods.org/pods/CollageView)
 [![License](https://img.shields.io/cocoapods/l/CollageView.svg?style=flat)](http://cocoapods.org/pods/CollageView)
 [![Platform](https://img.shields.io/cocoapods/p/CollageView.svg?style=flat)](http://cocoapods.org/pods/CollageView)
+<a href="https://swift.org">
+<img src="http://img.shields.io/badge/Swift-4.0-brightgreen.svg" alt="Language">
+</a>
+<a href="https://twitter.com/ahmtgny">
+<img src="https://img.shields.io/badge/contact-@ahmtgny-blue.svg?style=flat" alt="Twitter: @ahmtgny" />
+</a>
+<a href="https://github.com/ahmetkgunay/CollageView/tree/master/Source">
+<img src="https://img.shields.io/gemnasium/mathiasbynens/he.svg?style=flat">
+</a>
 
 Custom View, collageView implementation with pure swift4.
 
