@@ -80,7 +80,6 @@ open class CollageView: UIView {
         layoutDirection             = dataSource.collageViewLayoutDirection(self)
         rowOrColoumnCount           = dataSource.collageViewNumberOfRowOrColoumn(self)
         
-        assert(rowOrColoumnCount != 0, "Row or Coloumn Count must be more than 0")
         assert(itemCount >= rowOrColoumnCount, "Image count can not be more than row Count")
         
         addImageViews()
@@ -120,7 +119,7 @@ open class CollageView: UIView {
     override open func layoutSubviews() {
         super.layoutSubviews()
         
-        for imageView in imageViews {
+        for imageView in imageViews where rowOrColoumnCount != 0 {
             
             guard let collageItem = imageView.collageItem else { return }
             imageView.frame = frameAtIndex(rowIndex: collageItem.rowIndex)
@@ -141,6 +140,10 @@ extension CollageView {
     private func rowIndexForItem(at index:Int) -> rowIndex {
         
         var returnRowIndex = (0, 0)
+        
+        if rowOrColoumnCount == 0 {
+            return returnRowIndex
+        }
         
         switch self.layoutDirection {
         case .horizontal:
