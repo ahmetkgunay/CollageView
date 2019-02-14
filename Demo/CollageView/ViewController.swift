@@ -21,6 +21,18 @@ class ViewController: UIViewController {
     }
     
     @IBOutlet weak var collageView: CollageView!
+    var layoutDirection: CollageViewLayoutDirection = .horizontal
+    var layoutNumberOfColomn: Int = 3
+
+    fileprivate lazy var reOrderButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(title: "ReOrder", style: .plain, target: self, action: #selector(self.reOrderButtonTapped(sender: )))
+        return button
+    }()
+    
+    override func loadView() {
+        super.loadView()
+        navigationItem.rightBarButtonItem = reOrderButton
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +47,21 @@ class ViewController: UIViewController {
     deinit {
         collageView.delegate    = nil
         collageView.dataSource  = nil
+    }
+    
+    // MARK: Button Actions
+    
+    @objc private func reOrderButtonTapped(sender: UIBarButtonItem) {
+        
+        sender.tag += 1
+        if sender.tag%2 == 0 {
+            layoutDirection = .horizontal
+            layoutNumberOfColomn = 3
+        } else {
+            layoutDirection = .vertical
+            layoutNumberOfColomn = 2
+        }
+        collageView.reload()
     }
 }
 
@@ -66,7 +93,6 @@ extension ViewController: CollageViewDataSource {
         itemView.layer.borderWidth = 3
         
         if index == shownImagesCount - 1 {
-            
             addBlackViewAndLabel(to: itemView)
         }
     }
@@ -78,12 +104,12 @@ extension ViewController: CollageViewDataSource {
     
     func collageViewNumberOfRowOrColoumn(_ collageView: CollageView) -> Int {
         
-        return 3
+        return layoutNumberOfColomn
     }
     
     func collageViewLayoutDirection(_ collageView: CollageView) -> CollageViewLayoutDirection {
         
-        return .horizontal
+        return layoutDirection
     }
     
     // Helpers
