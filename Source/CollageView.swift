@@ -8,7 +8,7 @@
 
 import UIKit
 
-public enum CollageViewLayoutDirection {
+@objc public enum CollageViewLayoutDirection: NSInteger {
     case vertical, horizontal
 }
 
@@ -17,7 +17,7 @@ public enum CollageViewLayoutDirection {
     @objc optional func collageView(_ collageView: CollageView, didSelect itemView: CollageItemView, at index: Int)
 }
 
-public protocol CollageViewDataSource: NSObjectProtocol {
+@objc public protocol CollageViewDataSource: NSObjectProtocol {
     
     func collageViewNumberOfRowOrColoumn(_ collageView: CollageView) -> Int
     func collageViewNumberOfTotalItem(_ collageView: CollageView) -> Int
