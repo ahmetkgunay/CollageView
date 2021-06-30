@@ -12,7 +12,7 @@ public struct CollageItem {
     
     public private(set) var borderWidth : CGFloat = 2.0
     public private(set) var borderColor : UIColor = .white
-    public private(set) var contentMode : UIViewContentMode = .scaleAspectFill
+    public private(set) var contentMode : UIView.ContentMode = .scaleAspectFill
     public private(set) var rowIndex  = (0, 0)
     public private(set) var indexForImageArray = 0
 }
