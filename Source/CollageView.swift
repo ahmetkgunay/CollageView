@@ -25,7 +25,7 @@ import UIKit
     func collageView(_ collageView: CollageView, configure itemView:CollageItemView, at index: Int)
 }
 
-open class CollageView: UIView {
+@objc open class CollageView: UIView {
     
     public typealias rowIndex = (x:Int, y:Int)
     
@@ -36,8 +36,8 @@ open class CollageView: UIView {
     open private(set) var rowOrColoumnCount : Int           = 0
     open private(set) var itemCount                         = 0
 
-    weak open var delegate : CollageViewDelegate?
-    weak open var dataSource: CollageViewDataSource? {
+    @objc weak open var delegate : CollageViewDelegate?
+    @objc weak open var dataSource: CollageViewDataSource? {
         didSet {
             setup()
         }
